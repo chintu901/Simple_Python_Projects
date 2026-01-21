@@ -2,11 +2,11 @@ import customtkinter as ctk
 from PIL import Image
 import os
 
-ctk.set_appearance_mode("light")
+ctk.set_appearance_mode("dark")
 
 app = ctk.CTk()
 app.title("Click Counter")
-app.geometry("500x500")
+app.geometry("500x350")
 app.resizable(False, False)
 
 # Create a Quick frame
@@ -15,7 +15,7 @@ Frame.pack(fill="both", expand=True)
 
 # Load image
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-ICON_DIR = os.path.join(BASE_DIR, "res", "icons")
+ICON_DIR = os.path.join(BASE_DIR, "res")
 
 reset_img = ctk.CTkImage(
     Image.open(os.path.join(ICON_DIR, "reset_icon.png")),
