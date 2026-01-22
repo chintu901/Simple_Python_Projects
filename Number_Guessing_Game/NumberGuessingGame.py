@@ -3,7 +3,7 @@ from PIL import *
 import random
 
 app = CTk()
-app.title("Click Counter")
+app.title("Number Guessing Game")
 app.geometry("500x350")
 app.resizable(False, False)
 
@@ -19,7 +19,7 @@ frame.grid_columnconfigure(0, weight=1)
 frame.grid_columnconfigure(1, weight=1)
 
 # Program Logic
-secrate_number = random.randint(1,10)
+secrate_number = random.randint(1, 10)
 attempts_counter = 3
 
 def check_input():
