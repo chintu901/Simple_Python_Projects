@@ -16,7 +16,7 @@ Overall, this project is a great example of combining mathematical logic with a 
 - Beginner-friendly GUI built using CustomTkinter
 
 ## Video Demo
-![Project_demo](https://github.com/user-attachments/assets/4ffea147-6139-4a56-bac9-3ec96898666f)
+[Project_demo](https://github.com/user-attachments/assets/4ffea147-6139-4a56-bac9-3ec96898666f)
 
 ## Concepts Learned from Prime Number Finder
 
@@ -39,4 +39,5 @@ Overall, this project is a great example of combining mathematical logic with a 
 - **Event Handling** – Running logic when the “Find Prime Numbers” button is clicked.
 
 - **GUI Layout Management** – Using grid and frames for structured UI design.
+
 
