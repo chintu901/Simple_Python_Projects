@@ -1,8 +1,3 @@
-# letters
-# words
-# vowels
-# Consonants
-
 import customtkinter as ctk
 from tkinter import messagebox
 
