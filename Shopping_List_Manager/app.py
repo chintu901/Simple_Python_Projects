@@ -21,7 +21,7 @@ class ItemCard(ctk.CTkFrame):
     
     def remove_item(self):
         # Remove from main app data
-        self.app.items = [item for item in self.items if item["name"] != self.name]
+        self.app.items = [item for item in self.app.items if item["name"] != self.name]
 
         # Remove UI card
         self.destroy()
