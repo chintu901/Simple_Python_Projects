@@ -14,4 +14,5 @@ This project demonstrates how real-world problems can be solved using programmin
 - Simple and interactive interface for easy use
 
 ## Demo Video
-![Expense splitter demo](https://github.com/user-attachments/assets/ee13a016-7e6f-444f-b5fc-d930dfbaaca2)
+![Expense_splitter_demo](https://github.com/user-attachments/assets/ee13a016-7e6f-444f-b5fc-d930dfbaaca2)
+
