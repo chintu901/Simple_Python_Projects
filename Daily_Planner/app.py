@@ -13,7 +13,7 @@ class ItemCard(ctk.CTkFrame):
 
         ctk.CTkLabel(self, text=time).grid(row=0, column=0, padx=10, pady=10, sticky="w")
         ctk.CTkLabel(self, text=task).grid(row=0, column=1, padx=10, pady=10)
-        ctk.CTkCheckBox(self).grid(row=0, column=2, padx=10, pady=10)
+        ctk.CTkCheckBox(self, text="").grid(row=0, column=2, padx=10, pady=10)
 
         ctk.CTkButton(self, text="Remove", command=self.remove_item).grid(row=0, column=3, padx=10, pady=10)
 
@@ -80,6 +80,7 @@ class DailyPlanner(ctk.CTk):
         add_task_btn = ctk.CTkButton(main_frame,
                                      text="Add Task",
                                      height=40,
+                                     command=self.add_to_list,
                                      font=ctk.CTkFont(size=15, weight="normal"))
         add_task_btn.grid(row=1, column=2, padx=10, sticky="ew")
 
