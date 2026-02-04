@@ -2,18 +2,18 @@ import customtkinter as ctk
 from tkinter import messagebox
 
 class ItemCard(ctk.CTkFrame):
-    def __init__(self, parent, app, name, qty, price):
+    def __init__(self, parent, app, time, task):
         super().__init__(parent, corner_radius=8)
 
         self.app = app      # 🔥 reference to main app
-        self.name = name    # store item name
+        self.name = task    # store task name
 
         # Grid setup
         self.grid_columnconfigure((0,1,2,3), weight=1)
 
-        ctk.CTkLabel(self, text=name).grid(row=0, column=0, padx=10, pady=10, sticky="w")
-        ctk.CTkLabel(self, text=qty).grid(row=0, column=1, padx=10, pady=10)
-        ctk.CTkLabel(self, text=f"₹{price}").grid(row=0, column=2, padx=10, pady=10)
+        ctk.CTkLabel(self, text=time).grid(row=0, column=0, padx=10, pady=10, sticky="w")
+        ctk.CTkLabel(self, text=task).grid(row=0, column=1, padx=10, pady=10)
+        ctk.CTkCheckBox(self).grid(row=0, column=2, padx=10, pady=10)
 
         ctk.CTkButton(self, text="Remove", command=self.remove_item).grid(row=0, column=3, padx=10, pady=10)
 
@@ -65,17 +65,17 @@ class DailyPlanner(ctk.CTk):
                         font=ctk.CTkFont(size=30, weight="bold"))
         title.grid(row=0, column=0, columnspan=3, sticky="ew")
 
-        task_time = ctk.CTkEntry(main_frame,
+        self.task_time = ctk.CTkEntry(main_frame,
                                  placeholder_text="Enter time",
                                  height=40,
                                  font=ctk.CTkFont(size=15, weight="normal"))
-        task_time.grid(row=1, column=0, padx=10, sticky="ew")
+        self.task_time.grid(row=1, column=0, padx=10, sticky="ew")
 
-        task_name = ctk.CTkEntry(main_frame,
+        self.task_name = ctk.CTkEntry(main_frame,
                                  placeholder_text="Enter task",
                                  height=40,
                                  font=ctk.CTkFont(size=15, weight="normal"))
-        task_name.grid(row=1, column=1, padx=10, sticky="ew")
+        self.task_name.grid(row=1, column=1, padx=10, sticky="ew")
 
         add_task_btn = ctk.CTkButton(main_frame,
                                      text="Add Task",
@@ -152,6 +152,40 @@ class DailyPlanner(ctk.CTk):
                                    width=100,
                                    font=ctk.CTkFont(size=15, weight="normal"))
         completion_rate_num.grid(row=1, column=4, sticky="w", padx=(0, 10))
+
+    def is_inList(self, n):
+        n = n.lower()
+
+        for item in self.items:
+            if item["task"].lower() == n:
+                return True
+        return False
+    
+    def add_to_list(self):
+        try:
+            time = self.task_time.get()
+            task = self.task_name.get()
+
+            if len(time) == 0 and len(task) == 0:
+                messagebox.showerror("Error", "Empty sting!!")
+                return
+            elif self.is_inList(task):
+                messagebox.showerror("Error", "Duplicate Task")
+                return
+            else:
+                self.items.append({
+                    "time": time,
+                    "task": task,
+                })
+
+                # add the card to the scrollable frame
+                card = ItemCard(self.scroll, self, time, task)
+                card.pack(fill="x", pady=5)
+
+        except ValueError:
+            messagebox.showerror("Error", "Please enter valid numbers")
+        except Exception as e:
+            messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
 
 
