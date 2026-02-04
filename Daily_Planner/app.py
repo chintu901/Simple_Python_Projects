@@ -114,7 +114,7 @@ class DailyPlanner(ctk.CTk):
         tasks_completed = ctk.CTkLabel(tasks_summry_frame,
                                    text="Tasks Completed:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        tasks_completed.grid(row=0, column=3, sticky="w", padx=(10, 0))
+        tasks_completed.grid(row=0, column=3, sticky="w")
 
         tasks_completed_num = ctk.CTkLabel(tasks_summry_frame,
                                    text=self.total_tasks,
@@ -126,14 +126,33 @@ class DailyPlanner(ctk.CTk):
         tasks_completed_num.grid(row=0, column=4, sticky="w")
 
         tasks_remaining = ctk.CTkLabel(tasks_summry_frame,
-                                   text="Tasks Completed:",
+                                   text="Tasks Remaining:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        tasks_remaining.grid(row=1, column=3, sticky="w", padx=(10, 0))
+        tasks_remaining.grid(row=1, column=0, sticky="w", padx=(10, 0))
+
+        tasks_remaining_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text=self.total_tasks,
+                                   fg_color="white",
+                                   corner_radius=5,
+                                   height=40,
+                                   width=100,
+                                   font=ctk.CTkFont(size=15, weight="normal"))
+        tasks_remaining_num.grid(row=1, column=1, sticky="w", padx=(0, 10))
 
         completion_rate = ctk.CTkLabel(tasks_summry_frame,
-                                   text="Tasks Completed:",
+                                   text="Completion Rate:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        completion_rate.grid(row=1, column=3, sticky="w", padx=(10, 0))
+        completion_rate.grid(row=1, column=3, sticky="w")
+
+        completion_rate_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text=f"{self.total_tasks}%",
+                                   fg_color="white",
+                                   corner_radius=5,
+                                   height=40,
+                                   width=100,
+                                   font=ctk.CTkFont(size=15, weight="normal"))
+        completion_rate_num.grid(row=1, column=4, sticky="w", padx=(0, 10))
+
 
 
 if __name__ == "__main__":
