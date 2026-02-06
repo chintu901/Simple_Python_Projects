@@ -1,6 +1,11 @@
 import customtkinter as ctk
 from tkinter import messagebox
 
+total_tasks = 0
+tasks_completed = 0
+tasks_remaining = 0
+tasks_completion_percentage = 0
+
 class ItemCard(ctk.CTkFrame):
     def __init__(self, parent, app, time, task):
         super().__init__(parent, corner_radius=8)
@@ -13,17 +18,18 @@ class ItemCard(ctk.CTkFrame):
 
         ctk.CTkLabel(self, text=time).grid(row=0, column=0, padx=10, pady=10, sticky="w")
         ctk.CTkLabel(self, text=task).grid(row=0, column=1, padx=10, pady=10)
-        ctk.CTkCheckBox(self, text="").grid(row=0, column=2, padx=10, pady=10)
+        ctk.CTkCheckBox(self, text="", command=self.app.check_complete_task).grid(row=0, column=2, padx=10, pady=10)
 
         ctk.CTkButton(self, text="Remove", command=self.remove_item).grid(row=0, column=3, padx=10, pady=10)
 
     
     def remove_item(self):
         # Remove from main app data
-        self.app.items = [item for item in self.app.items if item["name"] != self.name]
+        self.app.items = [item for item in self.app.items if item["task"] != self.name]
 
         # Remove UI card
         self.destroy()
+        self.app.update_summry()
 
 
 class DailyPlanner(ctk.CTk):
@@ -40,12 +46,7 @@ class DailyPlanner(ctk.CTk):
 
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
-
-        self.total_tasks = 0
-        self.tasks_completed = 0
-        self.tasks_remaining = 0
-        self.tasks_completion_percentage = 0
-
+        
         # Then widgets
         self.create_widgets()
     
@@ -103,56 +104,56 @@ class DailyPlanner(ctk.CTk):
                                    font=ctk.CTkFont(size=15, weight="normal"))
         total_tasks.grid(row=0, column=0, sticky="w", padx=(10, 0))
 
-        total_tasks_num = ctk.CTkLabel(tasks_summry_frame,
-                                   text=self.total_tasks,
+        self.total_tasks_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text="0",
                                    fg_color="white",
                                    corner_radius=5,
                                    height=40,
                                    width=100,
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        total_tasks_num.grid(row=0, column=1, sticky="w")
+        self.total_tasks_num.grid(row=0, column=1, sticky="w")
 
         tasks_completed = ctk.CTkLabel(tasks_summry_frame,
                                    text="Tasks Completed:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
         tasks_completed.grid(row=0, column=3, sticky="w")
 
-        tasks_completed_num = ctk.CTkLabel(tasks_summry_frame,
-                                   text=self.total_tasks,
+        self.tasks_completed_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text="0",
                                    fg_color="white",
                                    corner_radius=5,
                                    height=40,
                                    width=100,
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        tasks_completed_num.grid(row=0, column=4, sticky="w")
+        self.tasks_completed_num.grid(row=0, column=4, sticky="w")
 
         tasks_remaining = ctk.CTkLabel(tasks_summry_frame,
                                    text="Tasks Remaining:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
         tasks_remaining.grid(row=1, column=0, sticky="w", padx=(10, 0))
 
-        tasks_remaining_num = ctk.CTkLabel(tasks_summry_frame,
-                                   text=self.total_tasks,
+        self.tasks_remaining_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text="0",
                                    fg_color="white",
                                    corner_radius=5,
                                    height=40,
                                    width=100,
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        tasks_remaining_num.grid(row=1, column=1, sticky="w", padx=(0, 10))
+        self.tasks_remaining_num.grid(row=1, column=1, sticky="w", padx=(0, 10))
 
         completion_rate = ctk.CTkLabel(tasks_summry_frame,
                                    text="Completion Rate:",
                                    font=ctk.CTkFont(size=15, weight="normal"))
         completion_rate.grid(row=1, column=3, sticky="w")
 
-        completion_rate_num = ctk.CTkLabel(tasks_summry_frame,
-                                   text=f"{self.total_tasks}%",
+        self.completion_rate_num = ctk.CTkLabel(tasks_summry_frame,
+                                   text=f"{tasks_completion_percentage}%",
                                    fg_color="white",
                                    corner_radius=5,
                                    height=40,
                                    width=100,
                                    font=ctk.CTkFont(size=15, weight="normal"))
-        completion_rate_num.grid(row=1, column=4, sticky="w", padx=(0, 10))
+        self.completion_rate_num.grid(row=1, column=4, sticky="w", padx=(0, 10))
 
     def is_inList(self, n):
         n = n.lower()
@@ -162,6 +163,27 @@ class DailyPlanner(ctk.CTk):
                 return True
         return False
     
+    def update_summry(self):
+        global total_tasks
+        global tasks_remaining
+        global tasks_completed
+        global tasks_completion_percentage
+        total_tasks = len(self.items)
+        tasks_remaining = total_tasks - tasks_completed
+        tasks_completion_percentage = (tasks_completed/total_tasks)*100
+
+        self.total_tasks_num.configure(text=f"{total_tasks}")
+        self.tasks_completed_num.configure(text=f"{tasks_completed}")
+        self.tasks_remaining_num.configure(text=f"{tasks_remaining}")
+        self.completion_rate_num.configure(text=f"{round(tasks_completion_percentage,2)}%")
+        
+
+
+    def check_complete_task(self):
+        global tasks_completed
+        tasks_completed += 1
+        self.update_summry()
+
     def add_to_list(self):
         try:
             time = self.task_time.get()
@@ -182,6 +204,9 @@ class DailyPlanner(ctk.CTk):
                 # add the card to the scrollable frame
                 card = ItemCard(self.scroll, self, time, task)
                 card.pack(fill="x", pady=5)
+            self.update_summry()
+            self.task_time.delete(0, "end")
+            self.task_name.delete(0, "end")
 
         except ValueError:
             messagebox.showerror("Error", "Please enter valid numbers")
