@@ -303,3 +303,4 @@ TIERS = [
 if __name__ == "__main__":
     app = TeddyDayQuizApp()
     app.mainloop()
+#gg
