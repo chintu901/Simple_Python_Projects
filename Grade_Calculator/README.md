@@ -19,4 +19,4 @@ The program automatically calculates the total marks obtained, determines the gr
 
 [Grade_calculato](https://github.com/user-attachments/assets/9e414741-f5c0-49b6-b562-39c5b4657cc7)
 
-# game
+# game of throns
