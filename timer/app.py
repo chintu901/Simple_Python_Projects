@@ -109,10 +109,3 @@ class Timer(ctk.CTk):
 if __name__ == "__main__":
     app = Timer()
     app.mainloop()
-
-#first change
-#second change
-#thired change
-#fourth change
-#fivth chnage
-#six
