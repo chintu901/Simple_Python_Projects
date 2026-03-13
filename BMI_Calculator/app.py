@@ -195,4 +195,5 @@ if __name__ == "__main__":
     app = BMICalculator()
     app.mainloop()
 
-car.paint("blue")
+print(car.paint("blue"))
+
