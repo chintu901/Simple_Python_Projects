@@ -189,7 +189,6 @@ class BMICalculator(ctk.CTk):
             self.bmi_type_text.configure(text="Normal", text_color="#4dcc73")
         elif 25 < bmi < 100:
             self.bmi_type_text.configure(text="Overweight", text_color="#cc574d")
-            return 1 + 1
 
 
 if __name__ == "__main__":
