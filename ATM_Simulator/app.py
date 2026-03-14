@@ -504,7 +504,3 @@ if __name__ == "__main__":
     app = ATM_Simulator()
     app.mainloop()
 
-# class of the wood
-# clash of clan 
-# class of car
-# clss
