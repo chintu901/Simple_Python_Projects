@@ -505,3 +505,4 @@ if __name__ == "__main__":
     app.mainloop()
 
 # class of the wood
+# clash of clan 
