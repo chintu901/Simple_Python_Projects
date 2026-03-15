@@ -219,4 +219,4 @@ if __name__ == "__main__":
     app = DailyPlanner()
     app.mainloop()
 
-this is a binary tree
+this is a binary tree, it is the base of the sorting somthing
