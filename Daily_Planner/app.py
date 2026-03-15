@@ -219,4 +219,3 @@ if __name__ == "__main__":
     app = DailyPlanner()
     app.mainloop()
 
-this is a binary tree, it is the base of the sorting somthing with z plus security, and have it for somthing you dont know
