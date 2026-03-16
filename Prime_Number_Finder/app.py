@@ -138,5 +138,3 @@ if __name__ == "__main__":
     app = PrimeNumberFinder()
     app.mainloop()
 
-# car crash
-# hart
