@@ -503,6 +503,3 @@ class DepositMoney(ctk.CTkFrame):
 if __name__ == "__main__":
     app = ATM_Simulator()
     app.mainloop()
-
-# demo comment
-# commit
