@@ -171,9 +171,6 @@ class CalculatorApp(ctk.CTk):
             left = float(self.left_number)
             right = float(self.right_number)
 
-            # this is to check the function
-            # card for this year
-
             if self.operation == "+":
                 return left + right
             elif self.operation == "−":
