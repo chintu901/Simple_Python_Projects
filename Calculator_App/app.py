@@ -171,6 +171,8 @@ class CalculatorApp(ctk.CTk):
             left = float(self.left_number)
             right = float(self.right_number)
 
+            # this is to check the function
+
             if self.operation == "+":
                 return left + right
             elif self.operation == "−":
@@ -181,8 +183,6 @@ class CalculatorApp(ctk.CTk):
                 return left / right
         except:
             return "Error"
-
-
 
 # -------------------- Run App --------------------
 if __name__ == "__main__":
