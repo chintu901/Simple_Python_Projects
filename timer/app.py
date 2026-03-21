@@ -16,6 +16,7 @@ class Timer(ctk.CTk):
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(0, weight=1)
         # this is the function thst can do anything
+        # coding is fun but i am not doing it
 
         # Timer variables
         self.time_left = 10  # seconds
