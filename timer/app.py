@@ -104,7 +104,7 @@ class Timer(ctk.CTk):
         self.timer_running = False
         self.timer_msg.configure(text="Timer Stopped!!")
 
-       
+       # this the 2 last time for the 
 
 if __name__ == "__main__":
     app = Timer()
