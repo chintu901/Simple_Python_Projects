@@ -219,4 +219,4 @@ if __name__ == "__main__":
     app = DailyPlanner()
     app.mainloop()
 
-# class
+# class car of the 
