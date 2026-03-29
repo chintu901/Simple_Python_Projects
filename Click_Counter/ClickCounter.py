@@ -68,4 +68,4 @@ reset_button.grid(row=1, column=1, padx=10, sticky="w")
 
 app.mainloop()
 
-# the dream was hectic
+# the dream was hectic. and i get to know that when ever i dont have anything in mind the word "class" pops up
