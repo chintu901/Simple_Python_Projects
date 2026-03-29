@@ -68,4 +68,4 @@ reset_button.grid(row=1, column=1, padx=10, sticky="w")
 
 app.mainloop()
 
-# the deam was hectic
+# the dream was hectic
