@@ -60,4 +60,4 @@ class DigitalClock(ctk.CTk):
 if __name__ == "__main__":
     app = DigitalClock()
     app.mainloop()
-#thek kichde was quite good
+#thek kichde was quite good, it can be improved but well 
