@@ -118,4 +118,4 @@ if __name__ == "__main__":
     app = PatternPrinter()
     app.mainloop() 
 
-# that's soo cool and so intelactual
+# that's soo cool and so intellectual, it's make me do it more 
