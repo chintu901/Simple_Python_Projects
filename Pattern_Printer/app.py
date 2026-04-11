@@ -117,3 +117,5 @@ class  PatternPrinter(ctk.CTk):
 if __name__ == "__main__":
     app = PatternPrinter()
     app.mainloop() 
+
+# that's soo cool
