@@ -218,4 +218,4 @@ class DailyPlanner(ctk.CTk):
 if __name__ == "__main__":
     app = DailyPlanner()
     app.mainloop()
-
+# this is the daily task planer
