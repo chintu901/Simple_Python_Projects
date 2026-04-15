@@ -60,5 +60,3 @@ class DigitalClock(ctk.CTk):
 if __name__ == "__main__":
     app = DigitalClock()
     app.mainloop()
-
-space is awesome👍meni will go there
