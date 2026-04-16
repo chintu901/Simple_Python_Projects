@@ -218,5 +218,3 @@ class DailyPlanner(ctk.CTk):
 if __name__ == "__main__":
     app = DailyPlanner()
     app.mainloop()
-
-#card of the dack and it's players dil dil
