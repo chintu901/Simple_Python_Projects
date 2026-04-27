@@ -108,4 +108,4 @@ if __name__ == "__main__":
     app = Timer()
     app.mainloop()
 
-# balls are the greatest thing in the world
+# balls are the greatest thing in the world, one of the benfite of the balls are 
