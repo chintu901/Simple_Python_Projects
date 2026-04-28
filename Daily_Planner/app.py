@@ -1,3 +1,4 @@
+# This is daily plainer
 import customtkinter as ctk
 from tkinter import messagebox
 
