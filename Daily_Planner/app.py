@@ -1,4 +1,4 @@
-# This is daily plainer
+# This is daily plainer, made by me and i think its just for me also
 import customtkinter as ctk
 from tkinter import messagebox
 
