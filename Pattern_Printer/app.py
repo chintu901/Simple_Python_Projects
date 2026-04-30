@@ -1,4 +1,4 @@
-#this the 
+#this the file for all
 import customtkinter as ctk
 from tkinter import messagebox
 
