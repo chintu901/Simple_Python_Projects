@@ -1,5 +1,4 @@
-#this the file for all great things, is it not? 
-import customtkinter as ctk
+ import customtkinter as ctk
 from tkinter import messagebox
 
 type_of_pattern = None
