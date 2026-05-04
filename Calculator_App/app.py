@@ -1,4 +1,3 @@
-# coded it like pro, check it out by your self, it's hard to deny my statement 
 import customtkinter as ctk
 
 
