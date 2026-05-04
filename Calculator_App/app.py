@@ -1,4 +1,4 @@
-# coded it like pro
+# coded it like pro, check it out by your self
 import customtkinter as ctk
 
 
