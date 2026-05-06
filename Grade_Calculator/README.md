@@ -1,4 +1,5 @@
-drip itni lethal feels illegal# Grade Calculator
+drip itni lethal feels illegal 
+getting my point# Grade Calculator
 
 The Grade Calculator is a simple academic utility project that helps users calculate their total marks, grades, and final result based on multiple subjects. This project is designed to simulate a real student grading system in an interactive and user-friendly way.
 
