@@ -1,4 +1,4 @@
-# just hear my voice, this is the banking application
+# just hear my voice, this is the banking application- it's so simple that an kid can also do that
 import customtkinter as ctk
 from PIL import Image
 from tkinter import messagebox
