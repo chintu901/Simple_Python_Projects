@@ -1,4 +1,4 @@
-#digitl clock for digital people
+#digitl clock for digital people getting my point or not
 import customtkinter as ctk
 from tkinter import messagebox
 
