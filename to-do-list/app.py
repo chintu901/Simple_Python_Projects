@@ -1,4 +1,4 @@
-# to do list
+# to do list using python 
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
