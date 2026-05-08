@@ -1,4 +1,3 @@
-# to do list using python and py gui of the tech
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
