@@ -1,4 +1,4 @@
-# to do list using python 
+# to do list using python and py gui
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
