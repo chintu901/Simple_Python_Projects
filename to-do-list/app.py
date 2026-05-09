@@ -1,4 +1,3 @@
-#50% haryana ta hai, that a line wrote by me. getting my point
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
