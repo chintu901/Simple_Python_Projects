@@ -1,4 +1,4 @@
-#50% haryana ta hai
+#50% haryana ta hai, that a line wrote by me
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
