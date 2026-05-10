@@ -1,4 +1,3 @@
-#car, I like black car
 import customtkinter as ctk
 from tkinter import messagebox
 
