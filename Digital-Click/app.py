@@ -1,4 +1,4 @@
-#digital clock
+#digital clock, work as an normal clock
 import customtkinter as ctk
 from datetime import datetime
 
