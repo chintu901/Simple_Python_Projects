@@ -1,4 +1,4 @@
-from python import math
+from python import math as m
 import customtkinter as ctk
 from datetime import datetime
 
