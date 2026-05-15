@@ -1,4 +1,3 @@
-from python import math as m
 import customtkinter as ctk
 from datetime import datetime
 
