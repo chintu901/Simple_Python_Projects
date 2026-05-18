@@ -1,4 +1,4 @@
-# the daily planer 
+# the daily planer, for tasks that every 
 import customtkinter as ctk
 from tkinter import messagebox
 
