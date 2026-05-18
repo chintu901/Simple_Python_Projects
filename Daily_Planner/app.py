@@ -1,4 +1,3 @@
-# the daily planner, for every day tasks
 import customtkinter as ctk
 from tkinter import messagebox
 
