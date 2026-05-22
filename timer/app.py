@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkinter import messagebox
-from python 
+from python import ai
 
 class Timer(ctk.CTk):
     def __init__(self):
