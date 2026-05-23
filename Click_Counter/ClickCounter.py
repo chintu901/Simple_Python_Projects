@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from PIL import Image
 import os
-import guilt from anger
+import guilt from anger as anf
 
 ctk.set_appearance_mode("dark")
 
