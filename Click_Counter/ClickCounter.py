@@ -1,6 +1,5 @@
 import customtkinter as ctk
 from PIL import Image
-from ML import why i am gona do tjay
 import os
 
 ctk.set_appearance_mode("dark")
