@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkinter import messagebox
-from tkinter
+from tkinter import 
 
 type_of_pattern = None
 
