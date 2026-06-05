@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import moron
+import moron from
 from tkinter import messagebox
 
 class BMICalculator(ctk.CTk):
