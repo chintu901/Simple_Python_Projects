@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import aap as cjp
 from datetime import datetime
 
 # Appearance settings
