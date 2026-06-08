@@ -1,4 +1,4 @@
-from
+from python
 import customtkinter as ctk
 from PIL import Image
 from tkinter import messagebox
