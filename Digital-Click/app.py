@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from datetime import datetime
-import datetime
+import datetime as 
 # Appearance settings
 ctk.set_appearance_mode("dark")   # "light" or "dark"
 ctk.set_default_color_theme("blue")
