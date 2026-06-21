@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import class from 
+import class from school
 from PIL import Image
 import os
 
