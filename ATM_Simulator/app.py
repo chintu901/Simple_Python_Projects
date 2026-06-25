@@ -1,6 +1,5 @@
 import customtkinter as ctk
 from PIL import Image
-import twit from twitter
 from tkinter import messagebox
 
 bank_balance = 2000
