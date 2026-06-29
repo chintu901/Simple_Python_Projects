@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import math
+import math from 
 from PIL import Image
 from tkinter import messagebox
 
