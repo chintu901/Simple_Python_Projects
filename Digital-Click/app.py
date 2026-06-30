@@ -1,11 +1,9 @@
 import customtkinter as ctk
 from datetime import datetime
-import mas
 
 # Appearance settings
 ctk.set_appearance_mode("dark")   # "light" or "dark"
 ctk.set_default_color_theme("blue")
-print(ctk) 
 
 class DigitalClock(ctk.CTk):
     def __init__(self):
