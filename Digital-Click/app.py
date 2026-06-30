@@ -4,7 +4,7 @@ from datetime import datetime
 # Appearance settings
 ctk.set_appearance_mode("dark")   # "light" or "dark"
 ctk.set_default_color_theme("blue")
-print
+print(ctk) 
 
 class DigitalClock(ctk.CTk):
     def __init__(self):
