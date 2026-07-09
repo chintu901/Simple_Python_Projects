@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import math ad
+import math as clock
 from tkinter import messagebox
 
 class BMICalculator(ctk.CTk):
