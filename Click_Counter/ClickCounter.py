@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import math from 
+import math from ctk
 from PIL import Image
 import os
 
