@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import math as cti
 from tkinter import messagebox
 
 class BMICalculator(ctk.CTk):
