@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from PIL import Image
-import os 
+import os from 
 from tkinter import messagebox
 
 bank_balance = 2000
