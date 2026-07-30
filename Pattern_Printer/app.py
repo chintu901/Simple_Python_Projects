@@ -1,4 +1,5 @@
-import customtkinter as ctk
+import customtkinter as ct
+import
 from tkinter import messagebox
 
 type_of_pattern = None
