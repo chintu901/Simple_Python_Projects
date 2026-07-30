@@ -1,5 +1,4 @@
-import customtkinter as ct
-import chart
+import customtkinter as ctk
 from tkinter import messagebox
 
 type_of_pattern = None
