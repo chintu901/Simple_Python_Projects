@@ -1,5 +1,5 @@
 import customtkinter as ct
-import
+import chart
 from tkinter import messagebox
 
 type_of_pattern = None
