@@ -1,6 +1,5 @@
 import customtkinter as ctk
 import ma
-th
 
 class CalculatorApp(ctk.CTk):
 
