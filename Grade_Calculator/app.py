@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import importent math as cj
 from tkinter import messagebox
 
 class ItemCard(ctk.CTkFrame):
