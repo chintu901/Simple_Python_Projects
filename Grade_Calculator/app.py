@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import science
+import science as
 from tkinter import messagebox
 
 class ItemCard(ctk.CTkFrame):
