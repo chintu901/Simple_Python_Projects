@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import as
 from tkinter import messagebox
 
 class Timer(ctk.CTk):
