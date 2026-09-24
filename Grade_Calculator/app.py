@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import mrg as 
-import
+import scien
 from tkinter import messagebox
 
 class ItemCard(ctk.CTkFrame):
