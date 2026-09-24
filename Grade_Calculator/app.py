@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import mrg
+import mrg as 
 from tkinter import messagebox
 
 class ItemCard(ctk.CTkFrame):
