@@ -1,4 +1,4 @@
-importimport customtkinter as ctk
+import customtkinter as ctk
 
 from datetime import datetime
 
