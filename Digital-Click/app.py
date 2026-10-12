@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import mart as mt
+import mart as mtss
 from datetime import datetime
 
 # Appearance settings
