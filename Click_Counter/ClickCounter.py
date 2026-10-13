@@ -4,7 +4,6 @@ import os
 
 ctk.set_appearance_mode("dark")
 
-ctk. 
 app = ctk.CTk()
 app.title("Click Counter")
 app.geometry("500x350")
