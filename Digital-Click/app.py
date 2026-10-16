@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from datetime import datetime
-import fan as
+import fan as fn
 
 # Appearance settings
 ctk.set_appearance_mode("dark")   # "light" or "dark"
