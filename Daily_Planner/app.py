@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import ctk
+import ctk as
 from tkinter import messagebox
 
 total_tasks = 0
