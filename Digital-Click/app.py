@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import as class
 from datetime import datetime
 
 # Appearance settings
