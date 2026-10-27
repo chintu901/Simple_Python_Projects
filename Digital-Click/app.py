@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import math
+import math as
 from datetime import datetime
 
 # Appearance settings
