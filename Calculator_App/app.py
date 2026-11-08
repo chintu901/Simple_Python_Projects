@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import math
+import math as
 class CalculatorApp(ctk.CTk):
 
     def __init__(self):
