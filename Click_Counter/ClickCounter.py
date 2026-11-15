@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import
+import ma
 from PIL import Image
 import os
 
