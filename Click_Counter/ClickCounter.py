@@ -1,5 +1,4 @@
 import customtkinter as ctk
-import math as matric
 from PIL import Image
 import os
 
