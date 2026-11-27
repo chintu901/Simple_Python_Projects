@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import abh
+import abh as
 from tkinter import messagebox
 
 class BMICalculator(ctk.CTk):
